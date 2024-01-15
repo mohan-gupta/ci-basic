@@ -6,5 +6,3 @@ jobs:
     steps:
       - name: hello
         run: echo "Ran the first job successfully!!"
-      - name: this will fail!
-        run: exit 1;
