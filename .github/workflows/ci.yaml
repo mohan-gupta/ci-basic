@@ -4,5 +4,12 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3 # This will copy all the contents of the repo to its context, so that we can run files with github actions
       - name: hello
-        run: echo "Ran the first job successfully!!"
+        run: |
+          echo "Ran the first job successfully!!"
+      
+      - name: run-python
+        run: |
+          pip install -r requirements.txt
+          python add.py
